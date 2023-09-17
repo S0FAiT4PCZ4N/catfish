@@ -1,0 +1,59 @@
+yarn run v1.22.19
+warning ../../package.json: No license field
+$ ts-node src/Bot.ts
+yarn run v1.22.19
+warning ../../package.json: No license field
+$ ts-node src/Bot.ts
+/usr/lib/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/listeners/ready.ts(4,26): error TS2307: Cannot find module '../schedules/kremowka' or its corresponding type declarations.
+
+    at createTSError (/usr/lib/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/usr/lib/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/usr/lib/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/usr/lib/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/usr/lib/node_modules/ts-node/src/index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1329:10)
+    at Object.require.extensions.<computed> [as .ts] (/usr/lib/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1133:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:972:12)
+    at Module.require (node:internal/modules/cjs/loader:1157:19) {
+  diagnosticCodes: [ 2307 ]
+}
+error Command failed with exit code 1.
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+yarn run v1.22.19
+warning ../../package.json: No license field
+$ ts-node src/Bot.ts
+/usr/lib/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/listeners/ready.ts(5,23): error TS2307: Cannot find module '../schedules/barka' or its corresponding type declarations.
+
+    at createTSError (/usr/lib/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/usr/lib/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/usr/lib/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/usr/lib/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/usr/lib/node_modules/ts-node/src/index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1329:10)
+    at Object.require.extensions.<computed> [as .ts] (/usr/lib/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1133:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:972:12)
+    at Module.require (node:internal/modules/cjs/loader:1157:19) {
+  diagnosticCodes: [ 2307 ]
+}
+error Command failed with exit code 1.
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+yarn run v1.22.19
+warning ../../package.json: No license field
+$ ts-node src/Bot.ts
+Catfish is getting underwater...
+Mr. Catfish is online
+yarn run v1.22.19
+warning ../../package.json: No license field
+$ ts-node src/Bot.ts
+Catfish is getting underwater...
+Mr. Catfish is online
