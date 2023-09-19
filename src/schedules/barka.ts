@@ -1,5 +1,6 @@
 import { GuildBasedChannel } from "discord.js";
-import { AudioPlayerStatus, createAudioPlayer, createAudioResource, joinVoiceChannel } from "@discordjs/voice";
+import { AudioPlayerStatus, StreamType, createAudioPlayer, createAudioResource, joinVoiceChannel } from "@discordjs/voice";
+import { createReadStream } from "fs";
 
 export function barka(channel: GuildBasedChannel | undefined) {
     if(channel == undefined || !channel.isVoiceBased()) {
@@ -7,11 +8,7 @@ export function barka(channel: GuildBasedChannel | undefined) {
     }
 
     const player = createAudioPlayer();
-    const resource = createAudioResource('../audio/barka.mp3', {
-        metadata: {
-            title: 'Barka',
-        },
-    });
+    let resource = createAudioResource(createReadStream(__dirname + '/../audio/barka.ogg')); 
     resource.volume?.setVolume(1.0);
     player.play(resource);
 
@@ -23,12 +20,16 @@ export function barka(channel: GuildBasedChannel | undefined) {
 
     const subscription = connection.subscribe(player);
 
-    setTimeout(() => {
-        player.on(AudioPlayerStatus.Idle, () => {
-            subscription?.unsubscribe();
-            connection.destroy();
-        })}, 5_000);
+    player.on('error', (error) => {
+        console.error(`Error: ${error.message}`);
+        subscription?.unsubscribe();
+        connection.destroy();
+    });
 
+    player.on(AudioPlayerStatus.Idle, () => {
+        subscription?.unsubscribe();
+        connection.destroy();
+    });
 };
 
 module.exports = { barka };
