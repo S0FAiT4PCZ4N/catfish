@@ -11,6 +11,10 @@ export default (client: Client): void => {
             if(newState.channelId === channels[i].channelId) {
                 const guild = client.guilds.cache.get('1032709998146502696');
 
+                if(!newState.channel) return;
+
+                if(newState.channel.members.size > 1) return;
+
                 if(guild != undefined) {
                     const channel = guild.channels.cache.get('1162874505664938055');
 
