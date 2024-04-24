@@ -4,7 +4,8 @@
   "description": "A discord bot",
   "main": "index.js",
   "scripts": {
-    "start": "ts-node src/Bot.ts"
+    "start": "ts-node src/Bot.ts",
+    "deploy": "ts-node src/Deploy.ts"
   },
   "author": "S0FA",
   "license": "ISC",
